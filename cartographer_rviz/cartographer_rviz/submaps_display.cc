@@ -107,7 +107,7 @@ void SubmapsDisplay::onInitialize() {
 
 void SubmapsDisplay::reset() {
   MFDClass::reset();
-  absl::MutexLock locker(&mutex_);
+  absl::MutexLock locker(&mutex_);  
   client_.shutdown();
   trajectories_.clear();
   CreateClient();
